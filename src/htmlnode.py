@@ -11,9 +11,9 @@ class HTMLNode():
     def props_to_html(self):
         ret_str = ""
         if self.props is None:
-            raise Exception("this node has no props")
+            return ret_str
         for key, value in self.props.items():
-            ret_str += f" {key}={value}"
+            ret_str += f' {key}="{value}"'
         return ret_str
     
     def __repr__(self):
